@@ -17,21 +17,21 @@ import "solmate/utils/SafeCastLib.sol";
 */
 interface IxERC4626 {
     /*////////////////////////////////////////////////////////
-                        Custom Errors
+    //                  Custom Errors                       //
     ////////////////////////////////////////////////////////*/
 
     /// @dev thrown when syncing before cycle ends.
     error SyncError();
 
     /*////////////////////////////////////////////////////////
-                            Events
+    //                      Events                          //
     ////////////////////////////////////////////////////////*/
 
     /// @dev emit every time a new rewards cycle starts
     event NewRewardsCycle(uint32 indexed cycleEnd, uint256 rewardAmount);
 
     /*////////////////////////////////////////////////////////
-                        View Methods
+    //                  View Methods                        //
     ////////////////////////////////////////////////////////*/
 
     /// @notice the maximum length of a rewards cycle
@@ -48,7 +48,7 @@ interface IxERC4626 {
     function lastRewardAmount() external view returns (uint192);
 
     /*////////////////////////////////////////////////////////
-                    State Changing Methods
+    //              State Changing Methods                  //
     ////////////////////////////////////////////////////////*/
 
     /// @notice Distributes rewards to xERC4626 holders.

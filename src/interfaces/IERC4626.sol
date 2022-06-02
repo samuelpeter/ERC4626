@@ -7,7 +7,7 @@ import {ERC20} from "solmate/tokens/ERC20.sol";
 /// See: https://eips.ethereum.org/EIPS/eip-4626
 abstract contract IERC4626 is ERC20 {
     /*////////////////////////////////////////////////////////
-                      Events
+    //                  Events                              //
     ////////////////////////////////////////////////////////*/
 
     /// @notice `sender` has exchanged `assets` for `shares`,
@@ -19,7 +19,7 @@ abstract contract IERC4626 is ERC20 {
     event Withdraw(address indexed sender, address indexed receiver, uint256 assets, uint256 shares);
 
     /*////////////////////////////////////////////////////////
-                      Vault properties
+    //                  Vault properties                    //
     ////////////////////////////////////////////////////////*/
 
     /// @notice The address of the underlying ERC20 token used for
@@ -31,7 +31,7 @@ abstract contract IERC4626 is ERC20 {
     function totalAssets() external view virtual returns (uint256 totalAssets);
 
     /*////////////////////////////////////////////////////////
-                      Deposit/Withdrawal Logic
+    //                Deposit/Withdrawal Logic              //
     ////////////////////////////////////////////////////////*/
 
     /// @notice Mints `shares` Vault shares to `receiver` by
@@ -59,7 +59,7 @@ abstract contract IERC4626 is ERC20 {
     ) external virtual returns (uint256 assets);
 
     /*////////////////////////////////////////////////////////
-                      Vault Accounting Logic
+    //                Vault Accounting Logic                //
     ////////////////////////////////////////////////////////*/
 
     /// @notice The amount of shares that the vault would
