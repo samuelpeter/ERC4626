@@ -2,7 +2,7 @@
 pragma solidity 0.8.10;
 
 import {IERC4626, IERC4626RouterBase, ERC20} from "./interfaces/IERC4626RouterBase.sol";
-import {SafeTransferLib} from "solmate/utils/SafeTransferLib.sol";
+import {SafeTransferLib} from "../lib/solmate/src/utils/SafeTransferLib.sol";
 
 import {SelfPermit} from "./external/SelfPermit.sol";
 import {Multicall} from "./external/Multicall.sol";
